@@ -3,70 +3,79 @@ var isFull = false;
 
 //all animal methods
 
-function sleep(time){
+function sleep(time) {
     var howLongSleep = time;
-    console.log("I'm sleeping for " + 
-                howLongSleep +
-                " hours. Don't wake me up!");
+    console.log("I'm sleeping for " +
+        howLongSleep +
+        " hours. Don't wake me up!");
 }
 
-function eat(amount){
+function eat(amount) {
     var howMuchFood = amount;
-    if (howMuchFood > 2){
+    if (howMuchFood > 2) {
         isFull = true;
     }
     console.log("I'm eating " +
-                howMuchFood +
-                " lbs of food. Back off." +
-                " Are you full? " + isFull);
+        howMuchFood +
+        " lbs of food. Back off." +
+        " Are you full? " + isFull);
 }
 
-function jump(howHigh, howLong){
+function jump(howHigh, howLong) {
     console.log("You're jumping " +
-                howHigh + 
-                " ft hight for " + 
-                howLong +
-                " minutes.");
+        howHigh +
+        " ft hight for " +
+        howLong +
+        " minutes.");
 }
 
-function herb(){
+function herb() {
     console.log("I love plants.");
 }
 
 //0 = omnivore C = carnivore H = herbivore
 
-function hunt(type){
+function hunt(type) {
 
     var ftype = type.toLowerCase();
 
-    switch(ftype){
-        case "o": 
+    switch (ftype) {
+        case "o":
             console.log("plants and animals");
-        break;
-            
+            break;
+
         case "c":
             console.log("animals");
-        break;
-            
+            break;
+
         case "h":
             herb();
-        break;
+            break;
 
-        default: 
+        default:
             console.log("No hunting.");
     }
 
 
 }
 
-function run(speed, distance){
+function run(speed, distance) {
     var howFar = distance;
     console.log("I'm going " +
-                speed +
-                " kilometers per hour for " +
-                howFar +
-                " miles.");
-    
+        speed +
+        " kilometers per hour for " +
+        howFar +
+        " miles.");
+
+}
+
+function mate(mated, babies) {
+    if (mated > 0) {
+        console.log("You're a father of " + babies + "!!! " + "Congrats!");
+    } else {
+        console.log("Virgin.");
+    }
+
 }
 
 //calling all methods
@@ -76,3 +85,4 @@ eat(3);
 jump(3, 2);
 hunt("h");
 run(12, 20);
+mate(0, 12);
